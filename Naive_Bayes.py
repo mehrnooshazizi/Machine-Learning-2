@@ -2,7 +2,7 @@
 """
 Created on Mon Oct  5 17:35:55 2020
 
-@author: Poorvahab
+@author: Azizi
 """
 import pandas as pd
 from sklearn.naive_bayes import GaussianNB
@@ -38,7 +38,7 @@ def GetBestClassifier(count=5):
         for x in range(0,len(Ypredict)):
             if(Ypredict[x]!= Ytest.tolist()[x]):
                  countofMismatched +=1
-            e = countofMismatched * 100 / len(Ypredict)
+            e = countofMismatched * 100/len(Ypredict)
             if e < modelno: 
              bestmodel = gaussian
              modelno = e
